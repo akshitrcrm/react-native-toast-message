@@ -10,7 +10,8 @@ const Icon = (props) => {
   }
 
   return (
-    <Image source={source} style={[styles.base, style]} resizeMode='contain' />
+    <Image source={source} style={[styles.base, style]} resizeMode='contain' 
+    testID="toast_icon"/>
   );
 };
 
