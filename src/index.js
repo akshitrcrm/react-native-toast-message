@@ -309,6 +309,7 @@ class Toast extends Component {
     return (
       <Animated.View
         testID={"toast_animated_container_view"}
+        accessibilityLabel={"toast_animated_container_view"}
         onLayout={this.onLayout}
         style={baseStyle}
         {...this.panResponder.panHandlers}>

@@ -15,33 +15,33 @@ const BaseToast = (props) => {
   ];
 
   return (
-    <View style={baseStyle}
-    testID="toast_view">
-      <View style={styles.iconContainer}
-      testID="icon_container_view">
+    <View style={baseStyle}>
+      <View style={styles.iconContainer}>
         {icon ? (
           <Icon style={styles.icon} source={icon} />
         ) : (
-          <View style={styles.icon} testID={"icon_view"}/>
+          <View style={styles.icon} testID={"icon_view"}
+            accessibilityLabel={"icon_view"}
+          />
         )}
       </View>
 
-      <View style={styles.contentContainer}
-      testID="toast_content_container">
-        <View style={styles.body}
-        testID="toast_body">
+      <View style={styles.contentContainer}>
+        <View style={styles.body}>
           {text1 !== undefined && (
-            <View testID="toast_title_view">
+            <View>
               <Text style={styles.text1} numberOfLines={1}
-              testID="toast_title">
+              testID="toast_title"
+              accessibilityLabel={"toast_title"}>
                 {text1}
               </Text>
             </View>
           )}
           {text2 !== undefined && (
-            <View testID="toast_desc_view">
+            <View>
               <Text style={styles.text2} numberOfLines={2}
-              testID="toast_desc">
+              testID="toast_desc"
+              accessibilityLabel={"toast_desc"}>
                 {text2}
               </Text>
             </View>
@@ -50,7 +50,7 @@ const BaseToast = (props) => {
       </View>
 
       <TouchableOpacity style={styles.closeButtonContainer} onPress={onClose}
-      testID="toast_close_button">
+      testID="toast_close_button" accessibilityLabel={"toast_close_button"}>
         <Icon style={styles.closeIcon} source={icons.close} />
       </TouchableOpacity>
     </View>
