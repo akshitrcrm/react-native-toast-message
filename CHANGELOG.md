@@ -9,6 +9,12 @@ Headers are one of:
 
 - `Added`, `Changed`, `Removed` or `Fixed`.
 
+## [1.3.5]
+
+### Added
+
+- Test ID props
+
 ## [1.3.4]
 
 ### Fixed

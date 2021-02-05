@@ -20,8 +20,7 @@ const BaseToast = (props) => {
         {icon ? (
           <Icon style={styles.icon} source={icon} />
         ) : (
-          <View style={styles.icon} testID={"icon_view"}
-            accessibilityLabel={"icon_view"}
+          <View style={styles.icon}
           />
         )}
       </View>
@@ -32,7 +31,8 @@ const BaseToast = (props) => {
             <View>
               <Text style={styles.text1} numberOfLines={1}
               testID="toast_title"
-              accessibilityLabel={"toast_title"}>
+              accessibilityLabel={"toast_title"}
+              accessible={true}>
                 {text1}
               </Text>
             </View>
@@ -41,7 +41,8 @@ const BaseToast = (props) => {
             <View>
               <Text style={styles.text2} numberOfLines={2}
               testID="toast_desc"
-              accessibilityLabel={"toast_desc"}>
+              accessibilityLabel={"toast_desc"}
+              accessible={true}>
                 {text2}
               </Text>
             </View>
